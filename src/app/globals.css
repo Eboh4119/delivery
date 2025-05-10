@@ -2,32 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.foot li {
+    cursor: pointer;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.scrollable::-webkit-scrollbar{
+    display: none;
+}
+.fadein{
+    animation: fade-in 2s linear;
+}
+.jumpin{
+    animation: jump-in 2s linear
+}
+.tagline {
+    font-size: 1.2rem;
+    animation: slide-in 2s forwards;
   }
+
+  /* keyframes animation */
+@keyframes fade-in{
+    from {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes jump-in {
+    from{
+        transform: translateX(2);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(4);
+        opacity: 1;
+    }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@keyframes slide-in {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
 }
