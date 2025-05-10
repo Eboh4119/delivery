@@ -12,7 +12,6 @@ export type CartItem = OrderItem & {
 
 export const Offers = () => {
     const [isPopupOpen, setisPopupOpen] = useState(false);
-    const [cart, setCart] = useState <CartItem[]> ([]);
     const [selectedItem, setSelectedItem] = useState <OrderItem | null> (null);
 
     const context = useContext(CartOrderContext);
@@ -90,23 +89,23 @@ export const Offers = () => {
             <div className="mt-4">
                 <h1 className="font-bold text-3xl ml-2">Burgers</h1>
 
-                <div className="grid grid-cols-3 gap-4 my-3">
+                <div className="grid grid-cols-3 gap-4 my-3 max-sm:grid-cols-2 max-sm:gap-2">
                     {BurgerMenu.map((items) => (
-                        <div key={items.id} className="flex justify-between w-[396px] h-[195px] shadow-lg shadow-black px-4 py-4 my-2 rounded-lg">
+                        <div key={items.id} className="flex justify-between w-[396px] h-[195px] shadow-lg shadow-black px-4 py-4 my-2 rounded-lg max-sm:block max-sm:w-[200px] max-sm:h-[250px] max-sm:shadow-none">
                             <div>
                                 <h2 className="font-semibold text-lg">{items.offer}</h2>
-                                <p className="text-sm w-[200px] my-4">{items.details}</p>
+                                <p className="text-sm w-[200px] max-sm:hidden my-4">{items.details}</p>
                                 <p className="font-bold">GBP : {items.price}</p>
                             </div>
 
-                            <div className="relative">
+                            <div className="relative my-3">
                                 <Image 
                                 src={items.image}
                                 alt="image"
                                 width={150}
                                 height={80}
                                 />
-                                <button className="absolute left-24 bottom-4 bg-white py-2 px-2 rounded-tl-[20px]" onClick={() => handleOpen(items)}>
+                                <button className="absolute left-24 bottom-4 max-sm:bottom-0 bg-white py-2 px-2 rounded-tl-[20px]" onClick={() => handleOpen(items)}>
                                     <Image 
                                     src={'/Plus.svg'}
                                     alt="add"
@@ -124,23 +123,23 @@ export const Offers = () => {
             <div className="mt-4">
                 <h1 className="font-bold text-3xl ml-2 text-orange1">Fries</h1>
 
-                <div className="grid grid-cols-3 gap-4 my-3">
+                <div className="grid grid-cols-3 gap-4 my-3 a max-sm:grid-cols-2 max-sm:gap-2">
                     {FriesMenu.map((items) => (
-                        <div key={items.id} className="flex justify-between w-[396px] h-[195px] shadow-lg shadow-black px-4 py-4 my-2 rounded-lg">
+                        <div key={items.id} className="flex justify-between w-[396px] h-[195px] shadow-lg shadow-black px-4 py-4 my-2 rounded-lg max-sm:block max-sm:w-[200px] max-sm:h-[250px] max-sm:shadow-none">
                             <div>
                                 <h2 className="font-semibold text-lg">{items.offer}</h2>
-                                <p className="text-sm w-[200px] my-4">{items.details}</p>
+                                <p className="text-sm max-sm:hidden w-[200px] my-4">{items.details}</p>
                                 <p className="font-bold">GBP : {items.price}</p>
                             </div>
 
-                            <div className="relative">
+                            <div className="relative my-3">
                                 <Image 
                                 src={items.image}
                                 alt="image"
                                 width={150}
                                 height={80}
                                 />
-                                <button className="absolute left-24 bottom-4 bg-white py-2 px-2 rounded-tl-[20px]" onClick={() => handleOpen(items)}>
+                                <button className="absolute left-24 bottom-4 max-sm:bottom-0 bg-white py-2 px-2 rounded-tl-[20px]" onClick={() => handleOpen(items)}>
                                     <Image 
                                     src={'/Plus.svg'}
                                     alt="add"
@@ -158,23 +157,23 @@ export const Offers = () => {
             <div className="mt-4">
                 <h1 className="font-bold text-3xl ml-2 text-orange1">Cold Drinks</h1>
 
-                <div className="grid grid-cols-3 gap-4 my-3">
+                <div className="grid grid-cols-3 gap-4 my-3 max-sm:grid-cols-2 max-sm:gap-2 max-sm:mx-auto">
                     {ColdDrinks.map((items) => (
-                        <div key={items.id} className="flex justify-between w-[396px] h-[195px] shadow-lg shadow-black px-4 py-4 my-2 rounded-lg">
+                        <div key={items.id} className="flex justify-between w-[396px] h-[195px] shadow-lg shadow-black max-sm:shadow-none px-4 py-4 my-2 rounded-lg max-sm:block max-sm:w-[200px] max-sm:h-[250px]">
                             <div>
                                 <h2 className="font-semibold text-lg">{items.offer}</h2>
-                                <p className="text-sm w-[200px] my-4">{items.details}</p>
+                                <p className="text-sm w-[200px] max-sm:hidden my-4">{items.details}</p>
                                 <p className="font-bold">GBP : {items.price}</p>
                             </div>
 
-                            <div className="relative">
+                            <div className="relative my-3">
                                 <Image 
                                 src={items.image}
                                 alt="image"
                                 width={150}
                                 height={80}
                                 />
-                                <button className="absolute left-24 bottom-4 bg-white py-2 px-2 rounded-tl-[20px]" onClick={() => handleOpen(items)}>
+                                <button className="absolute left-24 bottom-4 max-sm:bottom-0 bg-white py-2 px-2 rounded-tl-[20px]" onClick={() => handleOpen(items)}>
                                     <Image 
                                     src={'/Plus.svg'}
                                     alt="add"
