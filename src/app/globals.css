@@ -5,6 +5,19 @@
 .foot li {
     cursor: pointer;
 }
+.cart p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.cart span{
+    font-weight: 600;
+}
 .scrollable::-webkit-scrollbar{
     display: none;
 }
@@ -51,4 +64,4 @@
       transform: translateX(0);
       opacity: 1;
     }
-}
+};

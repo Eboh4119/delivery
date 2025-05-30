@@ -39,7 +39,7 @@ export const Offers = () => {
         setisPopupOpen(false)
     };
 
-    // add
+    // handle Add to cart function
     const handleAddToCart = () => {
         if (selectedItem) {
             setAddedItem(prevItems => {
@@ -105,7 +105,7 @@ export const Offers = () => {
                                 width={150}
                                 height={80}
                                 />
-                                <button className="absolute left-24 bottom-4 max-sm:bottom-0 bg-white py-2 px-2 rounded-tl-[20px]" onClick={() => handleOpen(items)}>
+                                <button className="absolute left-24 bottom-[-8px] max-sm:bottom-0 bg-white py-2 px-2 rounded-tl-[20px]" onClick={() => handleOpen(items)}>
                                     <Image 
                                     src={'/Plus.svg'}
                                     alt="add"
@@ -139,7 +139,7 @@ export const Offers = () => {
                                 width={150}
                                 height={80}
                                 />
-                                <button className="absolute left-24 bottom-4 max-sm:bottom-0 bg-white py-2 px-2 rounded-tl-[20px]" onClick={() => handleOpen(items)}>
+                                <button className="absolute left-24 bottom-[-8px] max-sm:bottom-0 bg-white py-2 px-2 rounded-tl-[20px]" onClick={() => handleOpen(items)}>
                                     <Image 
                                     src={'/Plus.svg'}
                                     alt="add"
@@ -173,7 +173,7 @@ export const Offers = () => {
                                 width={150}
                                 height={80}
                                 />
-                                <button className="absolute left-24 bottom-4 max-sm:bottom-0 bg-white py-2 px-2 rounded-tl-[20px]" onClick={() => handleOpen(items)}>
+                                <button className="absolute left-24 bottom-[-8px] max-sm:bottom-0 bg-white py-2 px-2 rounded-tl-[20px]" onClick={() => handleOpen(items)}>
                                     <Image 
                                     src={'/Plus.svg'}
                                     alt="add"
@@ -187,7 +187,7 @@ export const Offers = () => {
                 </div>
             </div>
             
-            {/* Popup Menu */}
+            {/* Popup Menu and Selected Item*/}
             {isPopupOpen ? 
                 <div id="popup-menu"
                     role="dialog"
@@ -196,7 +196,7 @@ export const Offers = () => {
                     transform: 'translate(-50%, -50%)',
                     zIndex : 999
                     }} 
-                    className="fixed top-[50%] left-[50%] bg-white max-w-[400px] rounded-md shadow-black shadow-md w-[90%] p-[30px]">
+                    className="fixed top-[50%] left-[50%] bg-white max-w-[400px] rounded-md shadow-black shadow-md w-[80%] p-[30px]">
                         <div className="text-center mx-auto">
                             <h1 className="font-bold text-2xl mb-2">Are you sure you want to Order?</h1>
                             <div className="justify-self-center">

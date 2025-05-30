@@ -20,7 +20,11 @@ const config: Config = {
         "blue1" : "#03081F",
         "grey1" : "#D9D9D9",
         "blue2" : "#03081F",
-        "black1" : "#060606"
+        "black1" : "#060606",
+        "white2" : "#BCBCBC",
+        "white3" : "#FBFBFB",
+        "white4" : "#F6F6F6",
+        "white5" : "#CFCFCF"
       }
     },
   },

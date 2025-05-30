@@ -158,4 +158,4 @@ export const SuccessData = [
         digit : '17,457+',
         title : 'Food Items'
     },
-]
+];

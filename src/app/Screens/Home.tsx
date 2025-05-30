@@ -13,11 +13,6 @@ interface menuOptions {
     content : React.JSX.Element
 };
 
-interface countData {
-    digit : number
-    title : string
-}
-
 function Home () {
     const [searchValue, setSearchValue] = useState (''); 
     const [selectedOption, setIsSelectedOption] = useState <menuOptions | null> (null) 
